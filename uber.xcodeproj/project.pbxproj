@@ -14,6 +14,8 @@
 		2E72F10126D410F100511228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E72F0FF26D410F100511228 /* LaunchScreen.storyboard */; };
 		2E72F10926D410FB00511228 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E72F10826D410FB00511228 /* GoogleService-Info.plist */; };
 		2EFB105326D41A1200FFF109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFB105226D41A1200FFF109 /* Main.storyboard */; };
+		2EFB105726D43FF700FFF109 /* EntrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB105626D43FF700FFF109 /* EntrarViewController.swift */; };
+		2EFB105926D4400600FFF109 /* CadastroViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB105826D4400600FFF109 /* CadastroViewContoller.swift */; };
 		31D7921EA916C6FD3D0F7716 /* Pods_uber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743E8392EA490D3C327383 /* Pods_uber.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		2E72F10226D410F100511228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E72F10826D410FB00511228 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EFB105226D41A1200FFF109 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2EFB105626D43FF700FFF109 /* EntrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarViewController.swift; sourceTree = "<group>"; };
+		2EFB105826D4400600FFF109 /* CadastroViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewContoller.swift; sourceTree = "<group>"; };
 		37743E8392EA490D3C327383 /* Pods_uber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A292AD451242C2D6AAFCEF73 /* Pods-uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uber.release.xcconfig"; path = "Target Support Files/Pods-uber/Pods-uber.release.xcconfig"; sourceTree = "<group>"; };
 		B1C1395D2DFC984C84F2875C /* Pods-uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uber.debug.xcconfig"; path = "Target Support Files/Pods-uber/Pods-uber.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				2E72F0F426D410EE00511228 /* AppDelegate.swift */,
+				2EFB105526D43FC200FFF109 /* ViewController */,
+				2EFB105426D43FB400FFF109 /* Model */,
 				2E72F0F626D410EE00511228 /* SceneDelegate.swift */,
-				2E72F0F826D410EE00511228 /* ViewController.swift */,
 				2E72F0FD26D410F100511228 /* Assets.xcassets */,
 				2E72F0FF26D410F100511228 /* LaunchScreen.storyboard */,
 				2E72F10226D410F100511228 /* Info.plist */,
@@ -75,6 +80,23 @@
 				2EFB105226D41A1200FFF109 /* Main.storyboard */,
 			);
 			path = uber;
+			sourceTree = "<group>";
+		};
+		2EFB105426D43FB400FFF109 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EFB105526D43FC200FFF109 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E72F0F826D410EE00511228 /* ViewController.swift */,
+				2EFB105626D43FF700FFF109 /* EntrarViewController.swift */,
+				2EFB105826D4400600FFF109 /* CadastroViewContoller.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		ADA3439B2A3EF2555C1A38BC /* Frameworks */ = {
@@ -209,7 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFB105726D43FF700FFF109 /* EntrarViewController.swift in Sources */,
 				2E72F0F926D410EE00511228 /* ViewController.swift in Sources */,
+				2EFB105926D4400600FFF109 /* CadastroViewContoller.swift in Sources */,
 				2E72F0F526D410EE00511228 /* AppDelegate.swift in Sources */,
 				2E72F0F726D410EE00511228 /* SceneDelegate.swift in Sources */,
 			);

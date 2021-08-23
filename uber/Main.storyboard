@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Uber-->
         <scene sceneID="ymH-wv-4Cd">
             <objects>
-                <viewController id="bnE-ig-1Cv" sceneMemberID="viewController">
+                <viewController id="bnE-ig-1Cv" customClass="ViewController" customModule="uber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RvW-Gk-3s6">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
                             <constraint firstItem="slM-rT-moI" firstAttribute="top" secondItem="Lw7-J0-E9x" secondAttribute="bottom" id="tPb-JV-GFg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="l7G-wG-dd2"/>
+                    <navigationItem key="navigationItem" title="Uber" id="l7G-wG-dd2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rex-pf-A7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +111,7 @@
         <!--Cadastre-se-->
         <scene sceneID="6Iq-97-CQn">
             <objects>
-                <viewController id="2Rv-hU-PiD" sceneMemberID="viewController">
+                <viewController id="2Rv-hU-PiD" customClass="CadastroViewController" customModule="uber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7KY-fw-LuE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
         <!--Entrar-->
         <scene sceneID="BJx-At-OX5">
             <objects>
-                <viewController id="rO3-px-pPs" sceneMemberID="viewController">
+                <viewController id="rO3-px-pPs" customClass="EntrarViewController" customModule="uber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCe-6L-T0W">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
