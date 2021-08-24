@@ -11,7 +11,7 @@
         <!--Uber-->
         <scene sceneID="ymH-wv-4Cd">
             <objects>
-                <viewController id="bnE-ig-1Cv" customClass="ViewController" customModule="uber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bnE-ig-1Cv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RvW-Gk-3s6">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
