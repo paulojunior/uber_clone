@@ -20,11 +20,11 @@ class EntrarViewController: UIViewController {
         
         if retorno == "" {
             let autenticacao = Auth.auth()
-            autenticacao.signIn(withEmail: self.email.text, password: self.senha.text, completion: { (usuario, erro) in
+            autenticacao.signIn(withEmail: self.email.text!, password: self.senha.text!, completion: { (usuario, erro) in
                 
                 if erro == nil {
                     if usuario != nil {
-                        print("Usuário foi autenticado com sucesso!")
+                        self.performSegue(withIdentifier: "segueLogin", sender: nil)
                     }
                 } else {
                     print("Erro ao autenticar o usuário, tente novamente!")

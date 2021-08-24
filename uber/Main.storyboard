@@ -103,6 +103,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Uber" id="l7G-wG-dd2"/>
+                    <connections>
+                        <segue destination="rCc-NV-SyM" kind="presentation" identifier="segueLoginPrincipal" id="Svy-Mz-11c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rex-pf-A7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,6 +229,7 @@
                         <outlet property="nomeCompleto" destination="tQ6-Kc-bz7" id="gtb-fD-dNt"/>
                         <outlet property="senha" destination="n3p-ef-uap" id="lVs-MP-BsR"/>
                         <outlet property="tipoUsuario" destination="c7y-Zm-4dJ" id="2Bg-Ei-pzt"/>
+                        <segue destination="H9m-bz-tkQ" kind="presentation" identifier="segueLoginCadastro" id="NqV-Ce-nvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmR-ep-cfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,11 +311,28 @@
                     <connections>
                         <outlet property="email" destination="RM5-jr-bwk" id="eNy-54-pf5"/>
                         <outlet property="senha" destination="oty-qH-MWr" id="Wqt-7y-RbT"/>
+                        <segue destination="H9m-bz-tkQ" kind="presentation" identifier="segueLogin" id="agT-IF-cX0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPu-1i-eS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2573.8317757009345" y="-347.3002159827214"/>
+        </scene>
+        <!--UBER-->
+        <scene sceneID="pqe-Ui-tit">
+            <objects>
+                <viewController id="rCc-NV-SyM" customClass="PassageiroViewController" customModule="uber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7q-aE-NdD">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Oot-LE-VTk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UBER" id="yaj-2p-5nP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tC5-cQ-cAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406.0747663551401" y="-4.5356371490280782"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mmc-7F-fIQ">
@@ -331,7 +352,29 @@
             </objects>
             <point key="canvasLocation" x="649.06542056074761" y="-100.43196544276459"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u51-pc-kzl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9m-bz-tkQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d1Q-v7-0ww">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rCc-NV-SyM" kind="relationship" relationship="rootViewController" id="IhD-pq-v36"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyD-42-zKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3506.0747663551401" y="-4.5356371490280782"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NqV-Ce-nvK"/>
+        <segue reference="Svy-Mz-11c"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="fundo" width="2060" height="2060"/>
         <image name="logo" width="315" height="317"/>
