@@ -4,10 +4,52 @@
 //
 //  Created by Junior Ferreira on 23/08/21.
 //
-
+import FirebaseAuth
 import UIKit
 
 class CadastroViewController: UIViewController {
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var nomeCompleto: UITextField!
+    @IBOutlet weak var senha: UITextField!
+    @IBOutlet weak var tipoUsuario: UISwitch!
+    
+    @IBAction func cadastrarUsuario(_ sender: Any) {
+        
+        let retorno = self.validarCampos()
+        
+        if retorno == "" {
+            
+            //cadastrar usuario no firebase
+            let autenticacao = Auth.auth()
+            autenticacao.createUser(withEmail: self.email.text!, password: self.senha.text!, completion: { (usuario, erro) in
+                
+                if erro == nil {
+                    print("Sucesso ao criar conta do usuário")
+                } else {
+                    print("Erro ao criar conta do usuário, tente novamente!")
+                }
+                
+            })
+            
+        } else {
+            print("O campo \(retorno) não foi preenchido!")
+        }
+    }
+    
+    func validarCampos() -> String {
+        
+        if (self.email.text?.isEmpty)! {
+            return "E-mail"
+        } else if (self.nomeCompleto.text?.isEmpty)! {
+            return "Nome completo"
+        } else if (self.senha.text?.isEmpty)! {
+            return "Senha"
+        }
+        
+        return ""
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
