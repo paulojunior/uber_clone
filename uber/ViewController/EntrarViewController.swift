@@ -6,8 +6,48 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EntrarViewController: UIViewController {
+    
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var senha: UITextField!
+    
+    @IBAction func entrar(_ sender: Any) {
+        
+        let retorno = self.validarCampos()
+        
+        if retorno == "" {
+            let autenticacao = Auth.auth()
+            autenticacao.signIn(withEmail: self.email.text, password: self.senha.text, completion: { (usuario, erro) in
+                
+                if erro == nil {
+                    if usuario != nil {
+                        print("Usuário foi autenticado com sucesso!")
+                    }
+                } else {
+                    print("Erro ao autenticar o usuário, tente novamente!")
+                }
+                
+            })
+        } else {
+            print("O campo \(retorno) não foi preenchido!")
+        }
+        
+    }
+    
+    func validarCampos() -> String {
+        
+        if (self.email.text?.isEmpty)! {
+            return "E-mail"
+        } else if (self.senha.text?.isEmpty)! {
+            return "Senha"
+        }
+        
+        return ""
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
